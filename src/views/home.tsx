@@ -313,7 +313,7 @@ export default function HomePage() {
               {images.map((image, ind) => {
                 return (
                   <Carousel.Item key={image.id}>
-                    <Image src={"http://localhost:3443/images/products/" + image.id} className="d-block w-100" />
+                    <Image src={CONST.BACKEND.BASE_URL+"/images/products/" + image.id} className="d-block w-100" />
                     <Carousel.Caption>
                       <Button variant="danger" disabled={isFetching} onClick={()=>handleDeleteImage(image)} className="shadow">
                         {isFetching ? 'Please, wait...' : 'Delete'}
